@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>johns pineapples count</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@v1_pineapples_count@</string>
+		<key>v1_pineapples_count</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>u</string>
+			<key>few</key>
+			<string>У Джона %u ананаса</string>
+			<key>many</key>
+			<string>У Джона %u ананасов</string>
+			<key>one</key>
+			<string>У Джона %u ананас</string>
+			<key>other</key>
+			<string>У Джона %u ананаса</string>
+			<key>zero</key>
+			<string>У Джона нет ананасов</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

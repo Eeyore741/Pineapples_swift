@@ -1,24 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PYe-ub-GtE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Pineapple Vc-->
+        <scene sceneID="iy5-GL-jBL">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="PYe-ub-GtE" customClass="PineappleVc" customModule="Pinapples_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yQr-Wt-CAx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pineapple" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-tM-5eV">
+                                <rect key="frame" x="137.5" y="432" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="SrQ-jE-n0V"/>
+                                    <constraint firstAttribute="width" constant="100" id="s9w-ca-tRQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peter has two pineapples Peter has two pineapples Peter has two pineapples Peter has two pineapples Peter has two pineapples " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjW-QE-hB4" userLabel="label">
+                                <rect key="frame" x="16" y="296.5" width="343" height="95.5"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇬🇧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJL-cJ-lua" userLabel="flag">
+                                <rect key="frame" x="137" y="156.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="w7g-oz-Nh8"/>
+                                    <constraint firstAttribute="height" constant="100" id="xZT-Ph-dtv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="62"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5O-MM-XFs" userLabel="minusButton">
+                                <rect key="frame" x="76" y="478" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fOV-yc-wNl"/>
+                                    <constraint firstAttribute="width" constant="40" id="tcX-pB-KWO"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="minus"/>
+                                <connections>
+                                    <action selector="onMinusButtonClick:" destination="PYe-ub-GtE" eventType="touchUpInside" id="gcA-J7-At5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Db7-uJ-6fi" userLabel="plusButton">
+                                <rect key="frame" x="283" y="478" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Jb3-NI-sTu"/>
+                                    <constraint firstAttribute="height" constant="40" id="Lof-Oj-Zw4"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="plus"/>
+                                <connections>
+                                    <action selector="onPlusButtonClick:" destination="PYe-ub-GtE" eventType="touchUpInside" id="375-5P-nFf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Db7-uJ-6fi" firstAttribute="leading" secondItem="tEH-tM-5eV" secondAttribute="trailing" constant="45.5" id="0zV-7b-PTf"/>
+                            <constraint firstItem="JjW-QE-hB4" firstAttribute="leading" secondItem="quC-XN-6ht" secondAttribute="leading" constant="16" id="EsU-1s-nSj"/>
+                            <constraint firstItem="O5O-MM-XFs" firstAttribute="bottom" secondItem="tEH-tM-5eV" secondAttribute="bottom" constant="-14" id="REl-ns-5Xk"/>
+                            <constraint firstItem="JjW-QE-hB4" firstAttribute="centerY" secondItem="quC-XN-6ht" secondAttribute="centerY" id="WKD-xD-fgS"/>
+                            <constraint firstItem="Db7-uJ-6fi" firstAttribute="bottom" secondItem="tEH-tM-5eV" secondAttribute="bottom" constant="-14" id="ZiA-Cy-BLn"/>
+                            <constraint firstItem="JjW-QE-hB4" firstAttribute="bottom" secondItem="tEH-tM-5eV" secondAttribute="top" constant="-40" id="dbr-Ff-7jN"/>
+                            <constraint firstItem="quC-XN-6ht" firstAttribute="trailing" secondItem="JjW-QE-hB4" secondAttribute="trailing" constant="16" id="iK8-Zd-xLC"/>
+                            <constraint firstItem="tEH-tM-5eV" firstAttribute="leading" secondItem="O5O-MM-XFs" secondAttribute="trailing" constant="21.5" id="mic-pu-n1w"/>
+                            <constraint firstItem="IJL-cJ-lua" firstAttribute="bottom" secondItem="JjW-QE-hB4" secondAttribute="top" constant="-40" id="nC0-dA-oyL"/>
+                            <constraint firstItem="tEH-tM-5eV" firstAttribute="centerX" secondItem="quC-XN-6ht" secondAttribute="centerX" id="ofr-gS-7ys"/>
+                            <constraint firstItem="IJL-cJ-lua" firstAttribute="centerX" secondItem="quC-XN-6ht" secondAttribute="centerX" id="pCe-vv-9Mb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="quC-XN-6ht"/>
                     </view>
+                    <connections>
+                        <outlet property="flagLabel" destination="IJL-cJ-lua" id="HiP-0t-Yqb"/>
+                        <outlet property="textLabel" destination="JjW-QE-hB4" id="eKj-eC-NTz"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZU-kh-EkU" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-25" y="-45"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="minus" width="52" height="52"/>
+        <image name="pineapple" width="100" height="128"/>
+        <image name="plus" width="52" height="52"/>
+    </resources>
 </document>
